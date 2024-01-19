@@ -28,7 +28,7 @@ const TWNavBar = () => {
     }, []);
 
     return (
-        <header className='bg-white sticky shadow-md w-full fixed top-0 left-0 mb-10'>
+        <header className='bg-white sticky shadow-md w-full fixed top-0 left-0 mb-10 z-50'> {/* Added z-50 */}
             <div className='md:px-3 py-6 px-4 md:flex justify-between items-center
             bg-white'>
                 <div className='flex text-2xl cursor-pointer items-center gap-2 ml-4'>
