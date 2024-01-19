@@ -8,7 +8,7 @@ import App from "../App";
 
 
 
-const TWNavBar = () => {
+const NavBar = () => {
     let Links=[
         {name:'Gallery',link:'/'},
         {name:'Contact',link:'/'},
@@ -61,4 +61,4 @@ const TWNavBar = () => {
         
     );
 };
-export default TWNavBar;
+export default NavBar;
