@@ -38,7 +38,7 @@ const Gallery = () => {
                             
                             <div>
                                 <img src={image4} className='object-scale-down h-67.5 w-72' alt=''/>
-                                <h3 className='text-black text-l font-semibold px-5 py-2 text-center'>"I love my Hair so much!" -Julie</h3>
+                                <h3 className='text-black text-l font-semibold px-5 py-2 text-center'>"Preston so Sexy" -Julie</h3>
                             </div>
                         </div>
                         <div className=' rounded-[35px] h-100 shadow-2xl p-8 i items-center flex justify-center
@@ -60,6 +60,10 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
+        
+        <GalleryCarousal/>
+        
+        
         </div>
     )        
 }

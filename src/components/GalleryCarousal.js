@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import left_arrow from '../images/content/left-arrow.png';
+import right_arrow from '../images/content/right-arrow.png';
 import image1 from '../images/content/galleryimages/image1.jpg';
 import image2 from '../images/content/galleryimages/image2.JPG';
 import image3 from '../images/content/galleryimages/image3.JPG';
@@ -22,19 +24,26 @@ export default function GalleryCarousel() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prevSlide) =>
-                prevSlide === slides.length - 1 ? 0 : prevSlide + 1
-            );
-        }, 5000); // Change image every 5 seconds
+        const timer = setInterval(() => {
+            setCurrentSlide(prevSlide => (prevSlide + 1) % slides.length);
+        }, 3000); // Change slides every 3000 milliseconds (3 seconds)
 
-        return () => clearInterval(interval);
+        return () => clearInterval(timer); // Clear the interval on component unmount
     }, []);
 
     return (
-        <div>
-            <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} className='object-scale-down h-67.5 w-72' />
+        <div className='object-contain max-w-[600px] h-[900px] w-full m-auto py-16 px-4 relative'>
+            <div style={{backgroundImage: `url(${slides[currentSlide]})`}} className='w-full h-full rounded-2xl bg-center bg-cover duration-500'>
+                {/* Optional: Place navigation buttons or indicators here */}
+            </div>
+            {/* Left Arrow*/}
+            <div>
+            
+            </div>
+            {/* Right Arrow*/}
+            <div>
+
+            </div>
         </div>
     );
 }
-
